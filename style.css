@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background: url("hero-bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+/* .cont1{
+    display: none;
+} */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar .menu{
+    display: flex;
+    gap: 40px;
+}
+
+.navbar .logo{
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+.navbar .logo span{
+    color: #C06B3E;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: #C06B3E;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero  .content{
+    color: #fff;
+    max-width: 1200px;
+    margin-left: 20px;
+
+}
+
+.hero  .content h1{
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.hero  .content p{
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+.hero .content button{
+    background-color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    margin-top: 30px;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hero  .content button:hover{
+    background: #C06B3E;
+    color: #fff;
+
+}
+
+.cont{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+
+.wrapper{
+    position: relative;
+    width: 500px;
+    height: 540px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0,0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   transition: height .2s ease;
+   overflow: hidden;
+}
+
+.wrapper.active{
+    height: 580px;
+}
+
+.wrapper.active .login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .login{
+    transition: none;
+    transform: translateX(-500px);
+}
+
+
+.wrapper .login{
+    width: 450px;
+    padding: 40px;
+    /* display: none; */
+}
+
+.wrapper .registeration{
+    position: absolute;
+    transform: translateX(500px);
+    transition: none;
+}
+
+.wrapper.active .registeration{
+    transition: transform .18s ease;
+    transform: translateX(0);
+    
+
+}
+.wrapper .close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 2em;
+    color: #fff;
+    margin-top: 15px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.login h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.registeration h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+
+.inp{
+    position: relative;
+    width: 375px;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+.inp label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inp input:focus~label,
+.inp input:valid~label{
+    top: -5px;
+}
+
+.inp input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.inp .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 57px;
+    margin-top: 15px;
+}
+
+.remember{
+    font-size: .8em;
+    color: #C06B3E;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember label input{
+    accent-color: white;
+    margin-right: 3px;
+}
+
+.remember a{
+    color: white;
+    text-decoration: none;
+}
+.remember a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    background: #C06B3E;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.register{
+    font-size: .9em;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.register p a{
+    color: #C06B3E;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register p a:hover{
+    text-decoration: underline;
+}
